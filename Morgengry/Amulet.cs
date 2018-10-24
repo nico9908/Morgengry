@@ -17,6 +17,15 @@ namespace Morgengry
             medium,
             high
         }
+        public Amulet (string itemid)
+        {
+            this.itemid = itemid;
+        }
+        public Amulet(string itemid, level quality)
+        {
+            this.itemid = itemid;
+            this.quality = quality;
+        }
         public Amulet(string itemid, level quality, string design)
         {
             this.itemid = itemid;
