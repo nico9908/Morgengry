@@ -5,33 +5,36 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Morgengry
-{
-    class Amulet
+{   public enum Level
+    {
+        low,
+        medium,
+        high
+    }
+    public class Amulet
     {
         string itemid;
         string design;
-        level quality;       
-        public enum level
-        {
-            low,
-            medium,
-            high
-        }
-        public Amulet (string itemid)
-        {
-            this.itemid = itemid;
-        }
-        public Amulet(string itemid, level quality)
-        {
-            this.itemid = itemid;
-            this.quality = quality;
-        }
-        public Amulet(string itemid, level quality, string design)
+        Level quality;
+
+        public Amulet(string itemid, Level quality, string design)
         {
             this.itemid = itemid;
             this.quality = quality;
             this.design = design;
-            ToString();
         }
+        public Amulet(string itemid, Level quality) :
+            this(itemid, quality, "")
+        {
+            //this.itemid = itemid;
+            //this.quality = quality;
+        }
+        public Amulet (string itemid):
+            this(itemid, Level.medium, "")
+        {
+            //this.itemid = itemid;
+        }
+        
+        
     }
 }
