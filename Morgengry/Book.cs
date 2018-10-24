@@ -11,6 +11,22 @@ namespace Morgengry
         string itemid;
         string title;
         double price;
-
+        public Book(string itemid)
+        {
+            this.itemid = itemid;
+        }
+        public Book(string itemid, string title)
+        {
+            this.itemid = itemid;
+            this.title = title;
+        }
+        public Book(string itemid, string title, double price)
+        {
+            this.itemid = itemid;
+            this.title = title;
+            this.price = price;
+            ToString();
+        }
     }
 }
+
