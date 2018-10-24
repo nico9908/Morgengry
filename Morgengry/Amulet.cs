@@ -10,11 +10,19 @@ namespace Morgengry
     {
         string itemid;
         string design;
-        enum level
+        level quality;       
+        public enum level
         {
             low,
             medium,
             high
+        }
+        public Amulet(string itemid, level quality, string design)
+        {
+            this.itemid = itemid;
+            this.quality = quality;
+            this.design = design;
+            ToString();
         }
     }
 }

@@ -10,5 +10,7 @@ namespace Morgengry
     {
         string itemid;
         string title;
+        double price;
+
     }
 }
